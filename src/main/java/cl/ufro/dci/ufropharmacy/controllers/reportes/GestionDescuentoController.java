@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Locale;
@@ -35,10 +34,10 @@ public class GestionDescuentoController {
     }
     @GetMapping("/cupones/{fechaInicio}/{fechaFinal}")
     public List<CuponSUC> buscarCuponesFecha(@PathVariable String fechaInicio,@PathVariable String fechaFinal){
-        //se debe entregar la fecha en la forma de yyyy-MM-dd'T'HH:mm
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm", Locale.getDefault());
-        LocalDateTime fechaIni = LocalDateTime.parse(fechaInicio,formatter);
-        LocalDateTime fechaTer = LocalDateTime.parse(fechaFinal,formatter);
+        //se debe entregar la fecha en la forma de yyyy-MM-dd
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd", Locale.getDefault());
+        LocalDate fechaIni = LocalDate.parse(fechaInicio,formatter);
+        LocalDate fechaTer = LocalDate.parse(fechaFinal,formatter);
         return cuponServicesR.buscarCuponesFecha(fechaIni,fechaTer);
     }
 
@@ -47,8 +46,8 @@ public class GestionDescuentoController {
 
     @GetMapping("/productosdescuento/{fechaInicio}/{fechaFinal}")
     public List<ProductoDescuentoSUC> buscarProductosDescuentoFechaExpiracion(@PathVariable String fechaInicio,@PathVariable String fechaFinal){
-        //se debe entregar la fecha en la forma de yyyy-MM-dd'T'HH:mm
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm", Locale.getDefault());
+        //se debe entregar la fecha en la forma de yyyy-MM-dd
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd", Locale.getDefault());
         LocalDate fechaIni = LocalDate.parse(fechaInicio,formatter);
         LocalDate fechaTer = LocalDate.parse(fechaFinal,formatter);
         return productoDescuentoServicesR.buscarProductosDescuentosExpiracion(fechaIni,fechaTer);

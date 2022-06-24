@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -19,7 +19,7 @@ public class CuponServices {
         return cuponRepositoryR.findAll();
     }
 
-    public List<CuponSUC> buscarCuponesFecha(LocalDateTime fechaInicio, LocalDateTime fechaTermino){
+    public List<CuponSUC> buscarCuponesFecha(LocalDate fechaInicio, LocalDate fechaTermino){
         return cuponRepositoryR.findByFechaExpiracionBetween(fechaInicio,fechaTermino);
     }
 
