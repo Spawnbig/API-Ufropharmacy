@@ -1,5 +1,6 @@
 package cl.ufro.dci.ufropharmacy.models.casamatriz;
 
+import cl.ufro.dci.ufropharmacy.models.casamatriz.distribucion.ESTADO_PEDIDO;
 import lombok.Data;
 
 import javax.persistence.Entity;

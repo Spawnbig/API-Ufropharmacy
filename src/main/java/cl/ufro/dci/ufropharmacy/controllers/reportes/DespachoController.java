@@ -1,8 +1,8 @@
 package cl.ufro.dci.ufropharmacy.controllers.reportes;
 
 
-import cl.ufro.dci.ufropharmacy.models.casamatriz.DespachoSucursalCM;
-import cl.ufro.dci.ufropharmacy.models.casamatriz.ESTADO_DESPACHO;
+import cl.ufro.dci.ufropharmacy.models.casamatriz.distribucion.DespachoSucursalCM;
+import cl.ufro.dci.ufropharmacy.models.casamatriz.distribucion.ESTADO_DESPACHO;
 import cl.ufro.dci.ufropharmacy.services.reportes.DespachoSucursalServices;
 import cl.ufro.dci.ufropharmacy.utils.reportes.DespachoExporter;
 import org.springframework.beans.factory.annotation.Autowired;

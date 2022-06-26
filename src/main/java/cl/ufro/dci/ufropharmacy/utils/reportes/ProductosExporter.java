@@ -40,7 +40,7 @@ public class ProductosExporter {
             font.setFontHeight(20);
             style.setFillForegroundColor(IndexedColors.LIGHT_GREEN.getIndex());
             style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
-            sheet.addMergedRegion(new CellRangeAddress(0,0,0,8));
+            sheet.addMergedRegion(new CellRangeAddress(0,0,0,10));
             style.setFont(font);
             style.setAlignment(HorizontalAlignment.CENTER);
             createCell(row,0,"Productos",style);

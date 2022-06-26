@@ -1,7 +1,7 @@
 package cl.ufro.dci.ufropharmacy.dao.reportes;
 
-import cl.ufro.dci.ufropharmacy.models.casamatriz.DespachoSucursalCM;
-import cl.ufro.dci.ufropharmacy.models.casamatriz.ESTADO_DESPACHO;
+import cl.ufro.dci.ufropharmacy.models.casamatriz.distribucion.DespachoSucursalCM;
+import cl.ufro.dci.ufropharmacy.models.casamatriz.distribucion.ESTADO_DESPACHO;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Component;
 import java.util.Date;

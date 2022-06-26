@@ -16,7 +16,7 @@ public class ClienteSUC {
     private long id;
     private String institutoPrevision;
     @OneToOne
-    @JoinColumn(name = "historialcomprasuc_id", nullable = true)
+    @JoinColumn(name = "historialcomprasuc_id", nullable = false)
     private HistorialCompraSUC historialCompra;
     private boolean publicidad;
     private boolean estado;

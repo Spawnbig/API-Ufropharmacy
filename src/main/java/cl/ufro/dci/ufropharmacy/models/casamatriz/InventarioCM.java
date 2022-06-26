@@ -21,7 +21,7 @@ public class InventarioCM {
     public InventarioCM(long id, LocalDateTime fecha, List<ProductoSUC> productos) {
         this.id = id;
         this.fecha = fecha;
-        this.productos = productos;
+//        this.productos = productos;
     }
 
 

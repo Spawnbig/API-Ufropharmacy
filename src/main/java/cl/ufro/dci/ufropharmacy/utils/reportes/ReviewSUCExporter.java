@@ -40,7 +40,7 @@ public class ReviewSUCExporter {
         font.setFontHeight(20);
         style.setFillForegroundColor(IndexedColors.LIGHT_GREEN.getIndex());
         style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
-        sheet.addMergedRegion(new CellRangeAddress(0,0,0,4));
+        sheet.addMergedRegion(new CellRangeAddress(0,0,0,5));
         style.setFont(font);
         style.setAlignment(HorizontalAlignment.CENTER);
         createCell(row,0,"Reviews",style);

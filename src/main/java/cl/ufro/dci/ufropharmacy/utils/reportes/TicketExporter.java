@@ -1,8 +1,9 @@
 package cl.ufro.dci.ufropharmacy.utils.reportes;
 
 import cl.ufro.dci.ufropharmacy.models.casamatriz.CATEGORIA;
-import cl.ufro.dci.ufropharmacy.models.casamatriz.ESTADO_PEDIDO;
+
 import cl.ufro.dci.ufropharmacy.models.casamatriz.TicketCM;
+import cl.ufro.dci.ufropharmacy.models.casamatriz.distribucion.ESTADO_PEDIDO;
 import cl.ufro.dci.ufropharmacy.models.sucursal.ProductoDescuentoSUC;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.ss.util.CellRangeAddress;

@@ -1,8 +1,8 @@
 package cl.ufro.dci.ufropharmacy.services.reportes;
 
 import cl.ufro.dci.ufropharmacy.dao.reportes.DespachoSucursalRepository;
-import cl.ufro.dci.ufropharmacy.models.casamatriz.DespachoSucursalCM;
-import cl.ufro.dci.ufropharmacy.models.casamatriz.ESTADO_DESPACHO;
+import cl.ufro.dci.ufropharmacy.models.casamatriz.distribucion.DespachoSucursalCM;
+import cl.ufro.dci.ufropharmacy.models.casamatriz.distribucion.ESTADO_DESPACHO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;

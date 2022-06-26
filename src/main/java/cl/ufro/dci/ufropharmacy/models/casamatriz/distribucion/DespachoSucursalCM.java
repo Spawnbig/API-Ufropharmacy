@@ -1,4 +1,4 @@
-package cl.ufro.dci.ufropharmacy.models.casamatriz;
+package cl.ufro.dci.ufropharmacy.models.casamatriz.distribucion;
 
 import lombok.Data;
 
@@ -14,15 +14,15 @@ public class DespachoSucursalCM {
     private Date fechaHoraDespacho;
     private Date fechaHoraLlegada;
     private Date fechaEstimadaEntrega;
+
     @Enumerated(EnumType.STRING)
     private ESTADO_DESPACHO estadoDespacho;
+
     @OneToOne(optional = false, orphanRemoval = true)
     @JoinColumn(name = "pedido_sucursal_cm_id", nullable = false)
     private PedidoSucursalCM pedidoSucursal;
 
-
-    public DespachoSucursalCM() {
-    }
+    public DespachoSucursalCM() {}
 
     public DespachoSucursalCM(long id, Date fechaHoraDespacho, Date fechaHoraLlegada, Date fechaEstimadaEntrega, ESTADO_DESPACHO estadoDespacho, PedidoSucursalCM pedidoSucursal) {
         this.id = id;
@@ -33,4 +33,3 @@ public class DespachoSucursalCM {
         this.pedidoSucursal = pedidoSucursal;
     }
 }
-

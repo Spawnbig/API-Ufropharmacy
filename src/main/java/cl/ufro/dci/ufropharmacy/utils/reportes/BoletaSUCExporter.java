@@ -57,8 +57,9 @@ public class BoletaSUCExporter {
 
         createCell(row, 0, "ID", style);
         createCell(row, 1, "ID USUARIO", style);
-        createCell(row, 2, "PRECIO COMPRA", style);
-        createCell(row, 3, "FORMA PAGO", style);
+        createCell(row, 2, "NOMBRE USUARIO",style);
+        createCell(row, 3, "PRECIO COMPRA", style);
+        createCell(row, 4, "FORMA PAGO", style);
 
     }
 
@@ -107,6 +108,7 @@ public class BoletaSUCExporter {
             int columnCount = 0;
             createCell(row, columnCount++, b.getId(), style);
             createCell(row, columnCount++, b.getUsuario().getId(), style);
+            createCell(row, columnCount++, b.getUsuario().getNombre(),style);
             createCell(row, columnCount++, b.getPrecioTotal(), style);
             createCell(row, columnCount++, b.getTipoPago(), style);
         }

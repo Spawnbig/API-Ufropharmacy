@@ -31,4 +31,3 @@ public class CuponSUC {
         this.fechaExpiracion = fechaExpiracion;
     }
 }
-

@@ -1,7 +1,7 @@
 package cl.ufro.dci.ufropharmacy.utils.reportes;
 
-import cl.ufro.dci.ufropharmacy.models.casamatriz.DespachoSucursalCM;
-import cl.ufro.dci.ufropharmacy.models.casamatriz.ESTADO_DESPACHO;
+import cl.ufro.dci.ufropharmacy.models.casamatriz.distribucion.DespachoSucursalCM;
+import cl.ufro.dci.ufropharmacy.models.casamatriz.distribucion.ESTADO_DESPACHO;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.ss.util.CellRangeAddress;
 import org.apache.poi.xssf.usermodel.XSSFFont;
@@ -11,6 +11,8 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Date;
@@ -98,8 +100,9 @@ public class DespachoExporter {
             cell.setCellValue(fecha);
         }else if (value instanceof Date){
             Date temp = (Date) value;
-            String fecha = temp.getDate() + "-"+temp.getMonth() + "-" + temp.getYear();
-            cell.setCellValue(fecha);
+            DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
+            String strDate = dateFormat.format(temp);
+            cell.setCellValue(strDate);
         }
         cell.setCellStyle(style);
     }

@@ -59,8 +59,9 @@ public class CuponExporter {
         createCell(row, 0, "ID", style);
         createCell(row, 1, "CODIGO", style);
         createCell(row, 2, "PORCENTAJE DSCTO", style);
-        createCell(row,3,"ESPECIFICACIÓN",style);
+        createCell(row, 3, "ESPECIFICACION", style);
         createCell(row, 4, "FECHA EXPIRACION", style);
+
 
     }
 
@@ -111,7 +112,7 @@ public class CuponExporter {
             createCell(row, columnCount++, cupon.getId(), style);
             createCell(row, columnCount++, cupon.getCodigo(), style);
             createCell(row, columnCount++, cupon.getPorcentajeDescuento(), style);
-            createCell(row,columnCount++,cupon.getEspecificacion(),style);
+            createCell(row, columnCount++, cupon.getEspecificacion(), style);
             createCell(row, columnCount++, cupon.getFechaExpiracion(), style);
 
         }
